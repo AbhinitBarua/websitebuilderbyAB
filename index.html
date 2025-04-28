@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="toolbar">
+        <button id="newButton" class="toolbar-button">New</button>
+        <button id="codeButton" class="toolbar-button">Generate Code</button>
+        <button id="deleteButton" class="toolbar-button danger">Delete</button>
+      </div>
+      <div class="elements-panel">
+        <h3 class="panel-title">Elements</h3>
+        <button class="element-button" data-type="heading">Heading</button>
+        <button class="element-button" data-type="paragraph">Paragraph</button>
+        <button class="element-button" data-type="button">Button</button>
+        <button class="element-button" data-type="image">Image</button>
+        <button class="element-button" data-type="container">Container</button>
+      </div>
+      <div class="properties-panel">
+        <h3 class="panel-title">Properties</h3>
+        <div id="propertiesContent"></div>
+      </div>
+    </div>
+    <div class="canvas-container">
+      <div class="canvas" id="canvas"></div>
+    </div>
+  </div>
+  
+  <div class="modal" id="codeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Generated Code</h2>
+        <button class="close-button">&times;</button>
+      </div>
+      <textarea class="code-output" id="codeOutput" readonly></textarea>
+      <div class="button-row">
+        <button id="copyCodeButton" class="toolbar-button">Copy Code</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
